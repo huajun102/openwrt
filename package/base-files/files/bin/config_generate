@@ -104,7 +104,7 @@ generate_network() {
 				*) ipad=${ipaddr:-"192.168.$((addr_offset++)).1"} ;;
 			esac
 
-			netm=${netmask:-"255.255.255.0"}
+			netm=${netmask:-"255.255.240.0"}
 
 			uci -q batch <<-EOF
 				set network.$1.proto='static'
